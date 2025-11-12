@@ -13,7 +13,7 @@ public class Usuarios {
     public Usuarios(int conta, String nome) {
         this.conta = conta;
         this.nome = nome;
-        this.valor = 500.00;
+        this.valor = 0;
     }
 
     public Usuarios(int conta, String nome, double valorInicial) {
