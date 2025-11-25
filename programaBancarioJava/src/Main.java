@@ -1,10 +1,16 @@
+import entities.DataHoraStatus;
+import entities.OrderStatus;
 import entities.Usuarios;
+
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Usuarios usuario1;
+        DataHoraStatus deposited = new DataHoraStatus(new Date(), OrderStatus.DEPOSITED);
+        DataHoraStatus withdrawn = new DataHoraStatus(new Date(), OrderStatus.WITHDRAWN);
 
         System.out.println("Digite os quatro números finais da sua conta:");
         int conta = sc.nextInt();
@@ -23,19 +29,25 @@ public class Main {
         else {
             usuario1 = new Usuarios(conta, nome);
         }
+        System.out.println(" ");
 
         sc.nextLine();
 
+        System.out.println(deposited.toString());
         System.out.println("\nDados Iniciais: " + usuario1.toString());
 
         System.out.println("\nDigite o novo valor do deposito: ");
         usuario1.depositar(sc.nextDouble());
+        System.out.println(" ");
 
+        System.out.println(deposited.toString());
         System.out.println(usuario1.toString());
 
         System.out.println("\nDigite o valor que você deseja sacar: ");
         usuario1.sacarValor(sc.nextDouble());
+        System.out.println(" ");
 
+        System.out.println(withdrawn.toString());
         System.out.println(usuario1.toString());
 
 
