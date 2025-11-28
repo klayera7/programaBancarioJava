@@ -19,12 +19,14 @@ O principal objetivo foi praticar o **Encapsulamento** e a **Sobrecarga de Const
 
 ## ⚙️ Como a Lógica Funciona
 
-O projeto é dividido em duas classes principais:
+O projeto é dividido nas seguintes classes e funcionalidades:
 
 | Classe | Descrição |
 | :--- | :--- |
-| `Usuarios.java` (Entidade) | Armazena os dados da conta (`conta`, `nome`, `valor/saldo`). Contém três construtores para diferentes formas de inicialização. |
-| `Main.java` (Programa Principal) | É a interface de usuário. Lê os dados de entrada, usa a lógica de `if/else` para decidir qual construtor usar, e chama os métodos de transação (`depositar`, `sacarValor`). |
+| `Usuarios.java` (Entidade) | Armazena os dados (`conta`, `nome`, `valor/saldo`). Contém múltiplos construtores e os métodos de negócio (`depositar`, `sacarValor`). |
+| `DataHoraStatus.java` | Entidade usada em **Composição** para registrar a data, hora e o status de cada transação. |
+| `OrderStatus.java` (Enum) | Define as constantes literais (`DEPOSITED`, `WITHDRAWN`) para melhor legibilidade. |
+| `Main.java` (Programa Principal) | É a interface de usuário. Utiliza o *loop* **`do-while`** para apresentar um menu de operações repetível, mantendo o saldo atualizado. |
 
 ## 📚 Agradecimento
 
