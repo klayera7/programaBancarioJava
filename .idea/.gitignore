@@ -1,8 +1,21 @@
-# Default ignored files
+# Arquivos compilados (Binários do Java)
+*.class
+out/
+
+# Logs e arquivos temporários
+*.log
+
+# IntelliJ IDEA (Configurações e cache)
+.idea/
+*.iml
+*.iws
+*.ipr
 /shelf/
 /workspace.xml
-# Editor-based HTTP Client requests
 /httpRequests/
-# Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# Sistema Operacional (Lixo gerado pelo Windows/Mac)
+.DS_Store
+Thumbs.db
