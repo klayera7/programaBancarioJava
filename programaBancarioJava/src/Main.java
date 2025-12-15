@@ -70,7 +70,7 @@ public class Main {
             System.out.println("Escolha uma operação:");
             System.out.println("[D] Depósito");
 
-            System.out.println("[S] Saque (taxa de R$ 5,00 + taxa PJ, se aplicável)");
+            System.out.println("[S] Saque (taxa de R$ 5,00)");
             System.out.println("[E] Encerrar Sessão");
             System.out.print("Opção: ");
 
