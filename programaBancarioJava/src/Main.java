@@ -1,8 +1,7 @@
-import entities.DataHoraStatus;
-import entities.OrderStatus;
-import entities.Usuarios;
-import entities.UsuariosBusiness;
+import entities.*;
+
 import java.util.Date;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -17,48 +16,54 @@ public class Main {
         char tipoConta = sc.next().toUpperCase().charAt(0);
         sc.nextLine();
 
-        if (tipoConta == 'F') {
-            System.out.print("Digite os quatro números finais da sua conta: ");
-            int conta = sc.nextInt();
-            sc.nextLine();
+        // lembrete para adicionar um while aqui posteriormente
+        try {
+            if (tipoConta == 'F') {
+                System.out.print("Digite os quatro números finais da sua conta: ");
+                int conta = sc.nextInt();
+                sc.nextLine();
 
-            System.out.print("Digite o seu nome e sobrenome: ");
-            String nome = sc.nextLine();
+                System.out.print("Digite o seu nome e sobrenome: ");
+                String nome = sc.nextLine();
 
-            System.out.print("É o seu primeiro depósito? (s/n): ");
-            char resposta = sc.next().charAt(0);
+                System.out.print("É o seu primeiro depósito? (s/n): ");
+                char resposta = sc.next().charAt(0);
 
-            if (resposta == 's') {
-                System.out.print("Digite o valor do depósito inicial: ");
-                double valorInicial = sc.nextDouble();
-                usuario1 = new Usuarios(conta, nome, valorInicial);
+                if (resposta == 's') {
+                    System.out.print("Digite o valor do depósito inicial: ");
+                    double valorInicial = sc.nextDouble();
+                    usuario1 = new Usuarios(conta, nome, valorInicial);
+                } else {
+                    usuario1 = new Usuarios(conta, nome, 500);
+                }
+                sc.nextLine();
+
+            } else if (tipoConta == 'J') {
+                System.out.print("Digite a Razão Social: ");
+                String nome = sc.nextLine();
+
+                System.out.print("Digite o seu CNPJ: ");
+                String CNPJ = sc.nextLine();
+
+                System.out.print("É o seu primeiro depósito? (s/n): ");
+                char resposta = sc.next().charAt(0);
+
+                if (resposta == 's') {
+                    System.out.print("Digite o valor do depósito inicial: ");
+                    double valorInicial = sc.nextDouble();
+                    usuario1 = new UsuariosBusiness(0, nome, valorInicial, CNPJ);
+                } else {
+                    usuario1 = new UsuariosBusiness(0, nome, 500.00, CNPJ);
+                }
+                sc.nextLine();
+
             } else {
-                usuario1 = new Usuarios(conta, nome, 500);
+                System.out.println("Tipo de conta inválido. Encerrando.");
+                sc.close();
+                return;
             }
-            sc.nextLine();
-
-        } else if (tipoConta == 'J') {
-            System.out.print("Digite a Razão Social: ");
-            String nome = sc.nextLine();
-
-            System.out.print("Digite o seu CNPJ: ");
-            String CNPJ = sc.nextLine();
-
-            System.out.print("É o seu primeiro depósito? (s/n): ");
-            char resposta = sc.next().charAt(0);
-
-            if (resposta == 's') {
-                System.out.print("Digite o valor do depósito inicial: ");
-                double valorInicial = sc.nextDouble();
-                usuario1 = new UsuariosBusiness(0, nome, valorInicial, CNPJ);
-            } else {
-                usuario1 = new UsuariosBusiness(0, nome, 500.00, CNPJ);
-            }
-            sc.nextLine();
-
-        } else {
-            System.out.println("Tipo de conta inválido. Encerrando.");
-            sc.close();
+        } catch (InputMismatchException e) {
+            System.out.println("Erro, digite apenas numeros.");
             return;
         }
 
@@ -69,8 +74,7 @@ public class Main {
             System.out.println("\n-------------------------------------");
             System.out.println("Escolha uma operação:");
             System.out.println("[D] Depósito");
-
-            System.out.println("[S] Saque (taxa de R$ 5,00)");
+            System.out.println("[S] Saque (taxa de R$ 5,00,)");
             System.out.println("[E] Encerrar Sessão");
             System.out.print("Opção: ");
 
@@ -78,20 +82,55 @@ public class Main {
             sc.nextLine();
 
             if (opcao == 'D') {
-                System.out.print("Valor do depósito: ");
-                usuario1.depositar(sc.nextDouble());
-                sc.nextLine();
 
-                DataHoraStatus registro = new DataHoraStatus(new Date(), OrderStatus.DEPOSITED);
-                System.out.println(registro.toString());
+                try{
+                    System.out.print("Valor do depósito: ");
+                    usuario1.depositar(sc.nextDouble());
+                    sc.nextLine();
+
+                    DataHoraStatus registro = new DataHoraStatus(new Date(), OrderStatus.DEPOSITED);
+                    System.out.println(registro.toString());
+
+                } catch (InputMismatchException e) {
+                    System.out.println("Erro, digite apenas numeros.");
+                    System.out.println("");
+                    sc.nextLine();
+
+                } finally {
+                    System.out.println("Operação de deposito finalizada.");
+                    System.out.println("");
+                }
+
+
             }
             else if (opcao == 'S') {
-                System.out.print("Valor do saque: ");
-                usuario1.sacarValor(sc.nextDouble());
-                sc.nextLine();
 
-                DataHoraStatus registro = new DataHoraStatus(new Date(), OrderStatus.WITHDRAWN);
-                System.out.println(registro.toString());
+                try {
+                    System.out.print("Valor do saque: ");
+                    double valorSaque = sc.nextDouble();
+                    sc.nextLine();
+                    System.out.println("");
+
+                    usuario1.sacarValor(valorSaque);
+
+                    DataHoraStatus registro = new DataHoraStatus(new Date(), OrderStatus.WITHDRAWN);
+                    System.out.println(registro.toString());
+
+                } catch (SaldoInsuficiente e) {
+                    System.out.println("ERRO: " + e.getMessage());
+
+                } catch (InputMismatchException e) {
+                    System.out.println("Erro, digite apenas numeros.");
+                    System.out.println("");
+                    sc.nextLine();
+
+                } catch (Exception e) {
+                    System.out.println("Erro inesperado.");
+
+                } finally {
+                    System.out.println("Operação de saque finalizada.");
+                    System.out.println("");
+                }
             }
             else if (opcao == 'E') {
                 System.out.println("\nSessão encerrada. Até logo, " + usuario1.getNome() + "!");

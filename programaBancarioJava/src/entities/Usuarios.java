@@ -39,7 +39,22 @@ public class Usuarios {
     }
 
     public void sacarValor(double quantia) {
-        this.valor -= quantia + 5;
+
+        if (quantia <= 0) {
+            throw new IllegalArgumentException("Valor do saque deve ser maior que zero.");
+        }
+
+        double taxa = 5.0;
+        double total = quantia + taxa;
+
+        if (valor < total) {
+            throw new SaldoInsuficiente(
+                    "Saldo insuficiente para saque. Saldo atual: R$ "
+                            + String.format("%.2f", valor)
+            );
+        }
+
+        this.valor -= total;
     }
 
     public int getConta() {
