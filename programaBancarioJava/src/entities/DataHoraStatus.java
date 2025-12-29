@@ -33,7 +33,7 @@ public class DataHoraStatus {
 
     @Override
     public String toString() {
-        return "Horario da transação: " +
+        return "Horário da transação: " +
                 transaction;
     }
 }

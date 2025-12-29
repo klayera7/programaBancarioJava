@@ -9,6 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Usuarios usuario1 = null;
         char opcao;
+        Extrato extrato = new Extrato();
 
         System.out.println("--- BEM-VINDO AO CAIXA ELETRÔNICO ---");
         System.out.println();
@@ -16,7 +17,6 @@ public class Main {
         char tipoConta = sc.next().toUpperCase().charAt(0);
         sc.nextLine();
 
-        // lembrete para adicionar um while aqui posteriormente
         try {
             if (tipoConta == 'F') {
                 System.out.print("Digite os quatro números finais da sua conta: ");
@@ -74,7 +74,8 @@ public class Main {
             System.out.println("\n-------------------------------------");
             System.out.println("Escolha uma operação:");
             System.out.println("[D] Depósito");
-            System.out.println("[S] Saque (taxa de R$ 5,00,)");
+            System.out.println("[S] Saque (taxa de R$ 5,00)");
+            System.out.println("[T] Gerar Extrato");
             System.out.println("[E] Encerrar Sessão");
             System.out.print("Opção: ");
 
@@ -85,11 +86,14 @@ public class Main {
 
                 try{
                     System.out.print("Valor do depósito: ");
-                    usuario1.depositar(sc.nextDouble());
+                    Double valorDep = sc.nextDouble();
                     sc.nextLine();
+
+                    usuario1.depositar(valorDep);
 
                     DataHoraStatus registro = new DataHoraStatus(new Date(), OrderStatus.DEPOSITED);
                     System.out.println(registro.toString());
+                    extrato.addTransacao("DEPÓSITO | " + registro.toString() + " | Valor: R$ " + valorDep);
 
                 } catch (InputMismatchException e) {
                     System.out.println("Erro, digite apenas numeros.");
@@ -115,6 +119,7 @@ public class Main {
 
                     DataHoraStatus registro = new DataHoraStatus(new Date(), OrderStatus.WITHDRAWN);
                     System.out.println(registro.toString());
+                    extrato.addTransacao("SAQUE | " + registro.toString() + " | Valor: R$ " + valorSaque);
 
                 } catch (SaldoInsuficiente e) {
                     System.out.println("ERRO: " + e.getMessage());
@@ -132,6 +137,10 @@ public class Main {
                     System.out.println("");
                 }
             }
+            else if (opcao == 'T') {
+                extrato.gerarExtrato();
+            }
+
             else if (opcao == 'E') {
                 System.out.println("\nSessão encerrada. Até logo, " + usuario1.getNome() + "!");
             }
