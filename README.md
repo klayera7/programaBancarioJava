@@ -34,6 +34,7 @@ O projeto segue uma arquitetura organizada para facilitar a escalabilidade:
 | `src/entities/DataHoraStatus.java` | **Utilitário**. Classe responsável por registrar o *timestamp* exato de cada operação. |
 | `src/entities/OrderStatus.java` | **Enum**. Define estados imutáveis (`DEPOSITED`, `WITHDRAWN`) para garantir a consistência dos dados. |
 | `src/Main.java` | **Aplicação**. Ponto de entrada que gerencia o fluxo de interação com o usuário via terminal. |
+| `src/entities/Extrato.java` | **Persistência**. Gerencia o armazenamento temporário do histórico e a exportação dos dados para um arquivo de texto externo. |
 
 ## 📦 Como Executar
 
