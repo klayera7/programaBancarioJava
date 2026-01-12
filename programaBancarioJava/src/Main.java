@@ -67,6 +67,18 @@ public class Main {
             return;
         }
 
+        System.out.println("\n-------------------------------------");
+        System.out.print("Digite sua senha para acessar a conta: ");
+        String senhaDigitada = sc.nextLine();
+
+        if (!usuario1.login(senhaDigitada)) {
+            System.out.println("ERRO: Senha inválida.");
+            usuario1.notifyAccess(false, usuario1.getNome() + " [TENTATIVA DE INVASÃO]");
+            sc.close();
+            return;
+        }
+
+        usuario1.notifyAccess(true, usuario1.getNome());
         System.out.println("\n*** ACESSO CONCEDIDO ***");
         System.out.println("Status inicial: " + usuario1.toString());
 

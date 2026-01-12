@@ -1,10 +1,10 @@
 package entities;
 
-public class Users {
+public class Users implements Authenticated {
     private int conta;
     private String nome;
     private double valor;
-
+    private String password = "123";
 
     public Users() {
         this.valor = 0.0;
@@ -67,6 +67,11 @@ public class Users {
 
     public double getValor() {
         return valor;
+    }
+
+    @Override
+    public boolean login(String password) {
+        return this.password.equals(password);
     }
 
     @Override
