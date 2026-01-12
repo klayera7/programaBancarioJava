@@ -45,4 +45,4 @@ O projeto segue uma arquitetura organizada para facilitar a escalabilidade:
 1.  Clone este repositório.
 2.  Certifique-se de que o JDK 21 ou superior está instalado.
 3.  Localize o arquivo `src/Main.java`.
-4.  Execute o arquivo para iniciar o menu interativo no console. O sistema solicitará autenticação para prosseguir.
+4.  Execute o arquivo para iniciar o menu interativo no console. O sistema solicitará autenticação para prosseguir, por padrão "123", podendo ser alterada na classe `src/entities/Users.java`.
