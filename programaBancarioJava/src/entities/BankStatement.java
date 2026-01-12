@@ -1,13 +1,12 @@
 package entities;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Extrato {
+public class BankStatement {
 
     private List<String> historicos = new ArrayList<>();
     private String path = System.getProperty("user.home") + "\\Downloads\\extrato.txt";

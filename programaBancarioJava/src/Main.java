@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Usuarios usuario1 = null;
+        Users usuario1 = null;
         char opcao;
-        Extrato extrato = new Extrato();
+        BankStatement extrato = new BankStatement();
 
         System.out.println("--- BEM-VINDO AO CAIXA ELETRÔNICO ---");
         System.out.println();
@@ -32,9 +32,9 @@ public class Main {
                 if (resposta == 's') {
                     System.out.print("Digite o valor do depósito inicial: ");
                     double valorInicial = sc.nextDouble();
-                    usuario1 = new Usuarios(conta, nome, valorInicial);
+                    usuario1 = new Users(conta, nome, valorInicial);
                 } else {
-                    usuario1 = new Usuarios(conta, nome, 500);
+                    usuario1 = new Users(conta, nome, 500);
                 }
                 sc.nextLine();
 
@@ -51,9 +51,9 @@ public class Main {
                 if (resposta == 's') {
                     System.out.print("Digite o valor do depósito inicial: ");
                     double valorInicial = sc.nextDouble();
-                    usuario1 = new UsuariosBusiness(0, nome, valorInicial, CNPJ);
+                    usuario1 = new BusinessUsers(0, nome, valorInicial, CNPJ);
                 } else {
-                    usuario1 = new UsuariosBusiness(0, nome, 500.00, CNPJ);
+                    usuario1 = new BusinessUsers(0, nome, 500.00, CNPJ);
                 }
                 sc.nextLine();
 
@@ -91,7 +91,7 @@ public class Main {
 
                     usuario1.depositar(valorDep);
 
-                    DataHoraStatus registro = new DataHoraStatus(new Date(), OrderStatus.DEPOSITED);
+                    DateTimeStatus registro = new DateTimeStatus(new Date(), OrderStatus.DEPOSITED);
                     System.out.println(registro.toString());
                     extrato.addTransacao("DEPÓSITO | " + registro.toString() + " | Valor: R$ " + valorDep);
 
@@ -117,11 +117,11 @@ public class Main {
 
                     usuario1.sacarValor(valorSaque);
 
-                    DataHoraStatus registro = new DataHoraStatus(new Date(), OrderStatus.WITHDRAWN);
+                    DateTimeStatus registro = new DateTimeStatus(new Date(), OrderStatus.WITHDRAWN);
                     System.out.println(registro.toString());
                     extrato.addTransacao("SAQUE | " + registro.toString() + " | Valor: R$ " + valorSaque);
 
-                } catch (SaldoInsuficiente e) {
+                } catch (InsufficientBalance e) {
                     System.out.println("ERRO: " + e.getMessage());
 
                 } catch (InputMismatchException e) {

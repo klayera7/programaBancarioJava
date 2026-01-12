@@ -1,22 +1,22 @@
 package entities;
 
-public class Usuarios {
+public class Users {
     private int conta;
     private String nome;
     private double valor;
 
 
-    public Usuarios() {
+    public Users() {
         this.valor = 0.0;
     }
 
-    public Usuarios(int conta, String nome) {
+    public Users(int conta, String nome) {
         this.conta = conta;
         this.nome = nome;
         this.valor = 0;
     }
 
-    public Usuarios(int conta, String nome, double valorInicial) {
+    public Users(int conta, String nome, double valorInicial) {
         this.conta = conta;
         this.nome = nome;
         this.valor = valorInicial;
@@ -48,7 +48,7 @@ public class Usuarios {
         double total = quantia + taxa;
 
         if (valor < total) {
-            throw new SaldoInsuficiente(
+            throw new InsufficientBalance(
                     "Saldo insuficiente para saque. Saldo atual: R$ "
                             + String.format("%.2f", valor)
             );

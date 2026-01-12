@@ -2,16 +2,16 @@ package entities;
 
 import java.util.Date;
 
-public class DataHoraStatus {
+public class DateTimeStatus {
     private Date transaction;
     private OrderStatus OrderStatus;
 
-    public DataHoraStatus(Date saque, OrderStatus orderStatus) {
+    public DateTimeStatus(Date saque, OrderStatus orderStatus) {
         this.transaction = saque;
         OrderStatus = orderStatus;
     }
 
-    public DataHoraStatus(Date saque, Date deposito) {
+    public DateTimeStatus(Date saque, Date deposito) {
         this.transaction = saque;
     }
 

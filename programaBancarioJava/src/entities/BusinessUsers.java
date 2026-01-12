@@ -1,14 +1,14 @@
 package entities;
 
-public class UsuariosBusiness extends Usuarios {
+public class BusinessUsers extends Users {
 
     private String CNPJ;
 
-    public UsuariosBusiness() {
+    public BusinessUsers() {
         super();
     }
 
-    public UsuariosBusiness(int conta, String nome, double valorInicial, String CNPJ) {
+    public BusinessUsers(int conta, String nome, double valorInicial, String CNPJ) {
         super(0, nome, valorInicial);
         this.CNPJ = CNPJ;
     }
