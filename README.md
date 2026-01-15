@@ -23,7 +23,7 @@ O sistema foi projetado para validar regras essenciais de uma conta corrente:
 ## 🛠️ Tecnologias Utilizadas
 
 * **Linguagem:** Java (JDK 21+)
-* **IDE:** VS Code / IntelliJ IDEA
+* **IDE:** IntelliJ IDEA
 * **Conceitos Chave:** Encapsulamento, Herança, Polimorfismo, Sobrecarga de Construtores, Enums, Interfaces (Default Methods) e Tratamento de Exceções.
 
 ## 📂 Estrutura do Código
