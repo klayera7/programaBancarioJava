@@ -158,7 +158,7 @@ public class Main {
                 System.out.println("\nSessão encerrada. Até logo, " + usuario1.getNome() + "!");
             }
             else {
-                System.out.println("Opção inválida. Tente D, S ou E.");
+                System.out.println("Opção inválida. Tente D, S, T ou E.");
             }
 
             if (opcao != 'E') {
