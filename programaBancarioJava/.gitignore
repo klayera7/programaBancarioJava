@@ -11,7 +11,7 @@ out/
 *.iws
 *.ipr
 /shelf/
-/workspace.xml
+/.idea/workspace.xml
 /httpRequests/
 /dataSources/
 /dataSources.local.xml

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b40a97c1-c501-4941-840c-286e6aa011a2" name="Changes" comment="docs: ajuste em Tecnologias Utilizadas">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/programaBancarioJava/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/programaBancarioJava/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/programaBancarioJava/entities/Authenticated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/programaBancarioJava/entities/BankStatement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/programaBancarioJava/entities/BusinessUsers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/programaBancarioJava/entities/DateTimeStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/programaBancarioJava/entities/InsufficientBalance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/programaBancarioJava/entities/OrderStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/programaBancarioJava/entities/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programaBancarioJava/out/production/testesJava/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programaBancarioJava/out/production/testesJava/entities/Usuarios.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;klayera7&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/klayera7/programaBancarioJava.git&quot;,
+    &quot;accountId&quot;: &quot;cb3506cb-11c1-4643-a98b-ef83fbf1c6a4&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Security Analysis" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="35y5tbT9hWVolTgEnhAbh88rjLv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Teste.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b40a97c1-c501-4941-840c-286e6aa011a2" name="Changes" comment="" />
+      <created>1764069686814</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764069686814</updated>
+      <workItem from="1764069688214" duration="4395000" />
+      <workItem from="1764075055467" duration="3384000" />
+      <workItem from="1764111771499" duration="222000" />
+      <workItem from="1764341465557" duration="4687000" />
+      <workItem from="1764522551829" duration="1545000" />
+      <workItem from="1764614229835" duration="2015000" />
+      <workItem from="1764696345421" duration="3490000" />
+      <workItem from="1764797705531" duration="1421000" />
+      <workItem from="1764871644500" duration="4712000" />
+      <workItem from="1764937218850" duration="7011000" />
+      <workItem from="1765225761237" duration="2101000" />
+      <workItem from="1765235515845" duration="2962000" />
+      <workItem from="1765317378852" duration="338000" />
+      <workItem from="1765541405630" duration="10000" />
+      <workItem from="1765821850351" duration="893000" />
+      <workItem from="1765905100881" duration="6439000" />
+      <workItem from="1766520576807" duration="121000" />
+      <workItem from="1766667842967" duration="780000" />
+      <workItem from="1766856766166" duration="188000" />
+      <workItem from="1766861386751" duration="3053000" />
+      <workItem from="1766927291088" duration="5017000" />
+      <workItem from="1767020250334" duration="1686000" />
+      <workItem from="1767966669687" duration="114000" />
+      <workItem from="1768163700018" duration="26000" />
+      <workItem from="1768237521505" duration="49000" />
+      <workItem from="1768244030074" duration="678000" />
+      <workItem from="1768252397945" duration="5497000" />
+      <workItem from="1768479071421" duration="624000" />
+      <workItem from="1769016964373" duration="189000" />
+      <workItem from="1769018799839" duration="1930000" />
+      <workItem from="1769130187438" duration="3172000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: Implementação de data e hora no momento do deposito e do saque.">
+      <option name="closed" value="true" />
+      <created>1764078394586</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764078394586</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Atualizando README">
+      <option name="closed" value="true" />
+      <created>1764699796725</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764699796725</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refatora lógica inicial para identificar conta física ou jurídica">
+      <option name="closed" value="true" />
+      <created>1764876033202</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764876033202</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Adiciona Contas PJ (Pessoa Jurídica) e refatora Main com Polimorfismo">
+      <option name="closed" value="true" />
+      <created>1765238822441</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765238822441</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix line 73">
+      <option name="closed" value="true" />
+      <created>1765821915581</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765821915581</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: implementa tratamento de exceções e melhorias na UI do console">
+      <option name="closed" value="true" />
+      <created>1765912918334</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765912918334</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: Função de extrato bancario adicionada.">
+      <option name="closed" value="true" />
+      <created>1767020382621</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1767020382621</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Refactor: rename classes to English">
+      <option name="closed" value="true" />
+      <created>1768254726834</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1768254726834</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: implementação de interface de autenticação e validação de senha">
+      <option name="closed" value="true" />
+      <created>1768258891566</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1768258891566</updated>
+    </task>
+    <task id="LOCAL-00010" summary="docs: update README with authentication and inheritance details">
+      <option name="closed" value="true" />
+      <created>1768258931347</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1768258931347</updated>
+    </task>
+    <task id="LOCAL-00011" summary="docs: update README with authentication and inheritance details">
+      <option name="closed" value="true" />
+      <created>1768259065692</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1768259065692</updated>
+    </task>
+    <task id="LOCAL-00012" summary="docs: ajuste em Tecnologias Utilizadas">
+      <option name="closed" value="true" />
+      <created>1768479220435</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1768479220435</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Implementação de data e hora no momento do deposito e do saque." />
+    <MESSAGE value="Atualizando README" />
+    <MESSAGE value="Refatora lógica inicial para identificar conta física ou jurídica" />
+    <MESSAGE value="feat: Adiciona Contas PJ (Pessoa Jurídica) e refatora Main com Polimorfismo" />
+    <MESSAGE value="fix line 73" />
+    <MESSAGE value="feat: implementa tratamento de exceções e melhorias na UI do console" />
+    <MESSAGE value="feat: Função de extrato bancario adicionada." />
+    <MESSAGE value="Refactor: rename classes to English" />
+    <MESSAGE value="feat: implementação de interface de autenticação e validação de senha" />
+    <MESSAGE value="docs: update README with authentication and inheritance details" />
+    <MESSAGE value="docs: ajuste em Tecnologias Utilizadas" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: ajuste em Tecnologias Utilizadas" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
