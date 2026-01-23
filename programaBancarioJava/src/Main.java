@@ -20,9 +20,19 @@ public class Main {
 
             try {
                 if (tipoConta == 'F') {
-                    System.out.print("Digite os quatro números finais da sua conta: ");
-                    int conta = sc.nextInt();
-                    sc.nextLine();
+                    int conta;
+                    while (true) {
+                        System.out.print("Digite os quatro números finais da sua conta: ");
+                        String contaStr = sc.nextLine().trim();
+                        if (!contaStr.matches("\\d{4}")) {
+                            System.out.println(" ");
+                            System.out.println("--------------------------------------------");
+                            System.out.println("Conta inválida. Digite exatamente 4 números.");
+                            continue;
+                        }
+                        conta = Integer.parseInt(contaStr);
+                        break;
+                    }
 
                     System.out.print("Digite o seu nome e sobrenome: ");
                     String nome = sc.nextLine();
