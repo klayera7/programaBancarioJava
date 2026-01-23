@@ -13,58 +13,59 @@ public class Main {
 
         System.out.println("--- BEM-VINDO AO CAIXA ELETRÔNICO ---");
         System.out.println();
-        System.out.print("Qual o tipo de conta? [F] Física / [J] Jurídica: ");
-        char tipoConta = sc.next().toUpperCase().charAt(0);
-        sc.nextLine();
+        while (usuario1 == null) {
+            System.out.print("Qual o tipo de conta? [F] Física / [J] Jurídica: ");
+            char tipoConta = sc.next().toUpperCase().charAt(0);
+            sc.nextLine();
 
-        try {
-            if (tipoConta == 'F') {
-                System.out.print("Digite os quatro números finais da sua conta: ");
-                int conta = sc.nextInt();
-                sc.nextLine();
+            try {
+                if (tipoConta == 'F') {
+                    System.out.print("Digite os quatro números finais da sua conta: ");
+                    int conta = sc.nextInt();
+                    sc.nextLine();
 
-                System.out.print("Digite o seu nome e sobrenome: ");
-                String nome = sc.nextLine();
+                    System.out.print("Digite o seu nome e sobrenome: ");
+                    String nome = sc.nextLine();
 
-                System.out.print("É o seu primeiro depósito? (s/n): ");
-                char resposta = sc.next().charAt(0);
+                    System.out.print("É o seu primeiro depósito? (s/n): ");
+                    char resposta = sc.next().charAt(0);
 
-                if (resposta == 's') {
-                    System.out.print("Digite o valor do depósito inicial: ");
-                    double valorInicial = sc.nextDouble();
-                    usuario1 = new Users(conta, nome, valorInicial);
+                    if (resposta == 's') {
+                        System.out.print("Digite o valor do depósito inicial: ");
+                        double valorInicial = sc.nextDouble();
+                        usuario1 = new Users(conta, nome, valorInicial);
+                    } else {
+                        usuario1 = new Users(conta, nome, 500);
+                    }
+                    sc.nextLine();
+
+                } else if (tipoConta == 'J') {
+                    System.out.print("Digite a Razão Social: ");
+                    String nome = sc.nextLine();
+
+                    System.out.print("Digite o seu CNPJ: ");
+                    String CNPJ = sc.nextLine();
+
+                    System.out.print("É o seu primeiro depósito? (s/n): ");
+                    char resposta = sc.next().charAt(0);
+
+                    if (resposta == 's') {
+                        System.out.print("Digite o valor do depósito inicial: ");
+                        double valorInicial = sc.nextDouble();
+                        usuario1 = new BusinessUsers(0, nome, valorInicial, CNPJ);
+                    } else {
+                        usuario1 = new BusinessUsers(0, nome, 500.00, CNPJ);
+                    }
+                    sc.nextLine();
+
                 } else {
-                    usuario1 = new Users(conta, nome, 500);
+                    System.out.println(" ");
+                    System.out.println("Tipo de conta inválido. tente [F] ou [J].");
                 }
+            } catch (InputMismatchException e) {
+                System.out.println("Ocorreu um erro inesperado.");
                 sc.nextLine();
-
-            } else if (tipoConta == 'J') {
-                System.out.print("Digite a Razão Social: ");
-                String nome = sc.nextLine();
-
-                System.out.print("Digite o seu CNPJ: ");
-                String CNPJ = sc.nextLine();
-
-                System.out.print("É o seu primeiro depósito? (s/n): ");
-                char resposta = sc.next().charAt(0);
-
-                if (resposta == 's') {
-                    System.out.print("Digite o valor do depósito inicial: ");
-                    double valorInicial = sc.nextDouble();
-                    usuario1 = new BusinessUsers(0, nome, valorInicial, CNPJ);
-                } else {
-                    usuario1 = new BusinessUsers(0, nome, 500.00, CNPJ);
-                }
-                sc.nextLine();
-
-            } else {
-                System.out.println("Tipo de conta inválido. Encerrando.");
-                sc.close();
-                return;
             }
-        } catch (InputMismatchException e) {
-            System.out.println("Erro, digite apenas numeros.");
-            return;
         }
 
         System.out.println("\n-------------------------------------");
